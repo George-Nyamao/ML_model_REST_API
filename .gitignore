@@ -2,6 +2,8 @@
 .ipynb_checkpoints/
 .gcloudignore
 .vs/
+sampleSubmission.csv
+sentiment*.zip
 __pycache__/
 env/
 images/
