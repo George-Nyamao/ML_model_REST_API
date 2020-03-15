@@ -42,8 +42,15 @@ class NLPModel(object):
         """
         with open(path, 'wb') as f:
             pickle.dump(self.vectorizer, f)
+            print("Pickled vectorizer at {}".format(path))
+            
+    def pickle_clf(self, path='models/SentimentClassifier.pkl'):
+        """Saves the trained classifier for future use.
+        """
+        with open(path, 'wb') as f:
+            pickle.dump(self.clf, f)
             print("Pickled classifier at {}".format(path))
             
-    def plot_roc(self, X, y, size_x, size_y):
+    def plot_roc(self, X, y):
         """ Plot the ROC curve for X_test and y_test."""
-        plot_roc(self.clf, X, y, size_x, size_y)
+        plot_roc(self.clf, X, y)
